@@ -8,7 +8,7 @@ object StockService {
   def process(input: String): Unit = {
     input match {
       case Symbol() => println("look up price for valid symbol" + input)
-      case ReceiveStockPrice(symbol, price) => printf("Received price %f for symbol %s\n", price, symbol)
+      case ReceiveStockPrice(symbol@Symbol(), price) => printf("Received price %f for symbol %s\n", price, symbol)
       case _ => println("Invalid input " + input)
     }
   }

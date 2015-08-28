@@ -30,7 +30,10 @@ object app {
     //    acceptor.acceptStuff(Apple)
     //    acceptor.acceptStuff(new Apple)
     //提取器匹配
-    StockService.process("GOOG")
-    StockService.process("GOOG:1234")
+    //    StockService.process("error:1234")
+    //    StockService.process("GOOG:1234")
+    //正则表达式提取器
+    //new RegularExpr
+    //new MatchUsingRegex
   }
 }

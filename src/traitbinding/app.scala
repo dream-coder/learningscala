@@ -1,8 +1,8 @@
 package traitbinding
 
 
-import concurrentprogramming.{FasterPerfectNumberFinder, PerfectNumberFinder}
-import patternmatching._
+import akka.actor.{Props, ActorSystem}
+import concurrentprogramming.HelloActor
 
 /**
  * Created by huang_xw on 2015/08/20.
@@ -39,8 +39,11 @@ object app {
     //并发编程
     //    val pn = new PerfectNumberFinder
     //    pn.isPerfect(12)
-    val fpn = new FasterPerfectNumberFinder
-    (33550336 to 33550663).foreach((a: Int) => println(fpn.isPerfectConcurrent(a)))
+    //        val fpn = new FasterPerfectNumberFinder
+    //        (33550336 to 33550663).foreach((a: Int) => println(fpn.isPerfectConcurrent(a)))
+    val actorsystem = ActorSystem("mySystem")
+    val helloActor = actorsystem.actorOf(Props[HelloActor], "helloActor")
+    helloActor ! "hello"
   }
 }
 

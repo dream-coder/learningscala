@@ -1,6 +1,7 @@
 package traitbinding
 
 
+import concurrentprogramming.{FasterPerfectNumberFinder, PerfectNumberFinder}
 import patternmatching._
 
 /**
@@ -35,5 +36,11 @@ object app {
     //正则表达式提取器
     //new RegularExpr
     //new MatchUsingRegex
+    //并发编程
+    //    val pn = new PerfectNumberFinder
+    //    pn.isPerfect(12)
+    val fpn = new FasterPerfectNumberFinder
+    (33550336 to 33550663).foreach((a: Int) => println(fpn.isPerfectConcurrent(a)))
   }
 }
+

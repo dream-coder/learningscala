@@ -1,6 +1,6 @@
 package concurrentprogramming
 
-import akka.actor.Actor
+import akka.actor.{Props, Actor}
 import akka.event.Logging
 
 /**
@@ -8,9 +8,11 @@ import akka.event.Logging
  */
 class HelloActor extends Actor {
   val log = Logging(context.system, this)
+  val insideActor = context.actorOf(Props[InsideActor], name = "insideActor")
 
   def receive = {
-    case "hello" => log.info("world")
-    case _ => log.info("uhu")
+    case "hello" => insideActor ! "hello"
+    case "good" => insideActor ! "good"
+    case msg => log.info( "outside actor process:" + msg)
   }
 }

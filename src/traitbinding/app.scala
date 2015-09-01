@@ -43,7 +43,7 @@ object app {
     //        (33550336 to 33550663).foreach((a: Int) => println(fpn.isPerfectConcurrent(a)))
     val actorsystem = ActorSystem("mySystem")
     val helloActor = actorsystem.actorOf(Props[HelloActor], "helloActor")
-    helloActor ! "hello"
+    helloActor ! "ggg"
   }
 }
 

@@ -3,14 +3,19 @@
     <properties>
       <option name="languageLevel" value="Scala_2_10" />
       <compiler-classpath>
-        <root url="file://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-compiler/jars/scala-compiler-2.10.4.jar" />
-        <root url="file://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.10.4.jar" />
-        <root url="file://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.10.4.jar" />
+        <root url="file://$USER_HOME$/opt/scala-2.10.4/lib/scala-compiler.jar" />
+        <root url="file://$USER_HOME$/opt/scala-2.10.4/lib/scala-library.jar" />
+        <root url="file://$USER_HOME$/opt/scala-2.10.4/lib/scala-reflect.jar" />
       </compiler-classpath>
     </properties>
     <CLASSES>
-      <root url="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.10.4.jar!/" />
-      <root url="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.10.4.jar!/" />
+      <root url="jar://$USER_HOME$/opt/scala-2.10.4/lib/scala-actors-migration.jar!/" />
+      <root url="jar://$USER_HOME$/opt/scala-2.10.4/lib/scala-actors.jar!/" />
+      <root url="jar://$USER_HOME$/opt/scala-2.10.4/lib/scala-library.jar!/" />
+      <root url="jar://$USER_HOME$/opt/scala-2.10.4/lib/scala-reflect.jar!/" />
+      <root url="jar://$USER_HOME$/opt/scala-2.10.4/lib/scala-swing.jar!/" />
+      <root url="jar://$USER_HOME$/opt/scala-2.10.4/lib/akka-actors.jar!/" />
+      <root url="jar://$USER_HOME$/opt/scala-2.10.4/lib/typesafe-config.jar!/" />
     </CLASSES>
     <JAVADOC>
       <root url="http://www.scala-lang.org/api/2.10.4/" />

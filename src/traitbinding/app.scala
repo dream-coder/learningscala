@@ -1,23 +1,19 @@
 package traitbinding
 
-
-import akka.actor.{Props, ActorSystem}
-import concurrentprogramming.HelloActor
-
 /**
  * Created by huang_xw on 2015/08/20.
  */
 object app {
   def main(args: Array[String]) {
-    //    val check = new Check with DeparkmentCheck with EmploierCheck
-    //    println(check check("huangxw"))
-
-    //    val myWriterProfanityFirst = new StringWriterDelegate with UpperCaseWriter with ProfanityFilteredWriter
-    //    val myWriterProfanityLast = new StringWriterDelegate with ProfanityFilteredWriter with UpperCaseWriter
-    //    myWriterProfanityFirst writeMessage ("u are stupid")
-    //    myWriterProfanityLast writeMessage ("u are stupid")
-    //    println(myWriterProfanityFirst.toString())
-    //    println(myWriterProfanityLast.toString())
+    val check = new Check with DeparkmentCheck with EmploierCheck
+    println(check check ("huangxw"))
+    //
+    //        val myWriterProfanityFirst = new StringWriterDelegate with UpperCaseWriter with ProfanityFilteredWriter
+    //        val myWriterProfanityLast = new StringWriterDelegate with ProfanityFilteredWriter with UpperCaseWriter
+    //        myWriterProfanityFirst writeMessage ("u are stupid")
+    //        myWriterProfanityLast writeMessage ("u are stupid")
+    //        println(myWriterProfanityFirst.toString())
+    //        println(myWriterProfanityLast.toString())
     //隐士转换和伴生对象
     //    println(2 days ago)
     //    println(2 days from_now)
@@ -41,9 +37,11 @@ object app {
     //    pn.isPerfect(12)
     //        val fpn = new FasterPerfectNumberFinder
     //        (33550336 to 33550663).foreach((a: Int) => println(fpn.isPerfectConcurrent(a)))
-    val actorsystem = ActorSystem("mySystem")
-    val helloActor = actorsystem.actorOf(Props[HelloActor], "helloActor")
-    helloActor ! "ggg"
+    //    val actorsystem = ActorSystem("mySystem")
+    //    val helloActor = actorsystem.actorOf(Props[HelloActor], "helloActor")
+    //    helloActor ! "ggg"
+    //    val arr=Array((1,2),(2,3))
+    //    arr.foreach(a=>println(a._1))
   }
 }
 
